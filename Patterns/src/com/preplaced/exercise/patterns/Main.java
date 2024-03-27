@@ -9,8 +9,26 @@ public class Main {
 	System.out.print("Please enter number: ");
 	int userInput = sc.nextInt();
 	
+	// pattern 15
+	reverseLeftHalfPyramid(userInput);
+	
+	// pattern 14
+	//leftHalfPyramidPattern(userInput);
+	
+	// pattern 13
+	//reverseRightHalfPyramid(userInput);
+	
+	// pattern 12
+	//rightHalfPyramidPattern(userInput);
+	
+	// pattern 11
+	//squareFillPattern(userInput);
+	
+	// pattern 10
+	//butterflyStarPattern(userInput);
+	
 	// pattern 9
-	diamondStarPattern(userInput);
+	//diamondStarPattern(userInput);
 	
 	// pattern 8
 	//rhombusPattern(userInput);
@@ -38,6 +56,84 @@ public class Main {
 	
 	}
 	
+	private static void reverseLeftHalfPyramid(int userInput) {
+		for(int row=userInput; row>=1; row--) {
+			for(int col=1; col<=userInput-row; col++) {
+				System.out.print(" ");
+			}
+			for(int col=row; col>=1; col--) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
+
+	private static void leftHalfPyramidPattern(int userInput) {
+		for(int row=1; row<=userInput; row++) {
+			for(int col=1; col<=userInput-row; col++) {
+				System.out.print(" ");
+			}
+			for(int col=1; col<=row; col++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
+
+	private static void reverseRightHalfPyramid(int userInput) {
+		for(int row=userInput; row>=1; row--) {
+			for(int col=1; col<=row; col++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
+
+	private static void rightHalfPyramidPattern(int userInput) {
+		for(int row=1; row<=userInput; row++) {
+			for(int col=1; col<=row; col++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
+
+	private static void squareFillPattern(int userInput) {
+		for(int row=1; row<=userInput; row++) {
+			for(int col=1; col<=userInput; col++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
+
+	private static void butterflyStarPattern(int userInput) {
+		for(int row=1; row<=userInput; row++) {
+			for(int col=1; col<=row; col++) {
+				System.out.print("*");
+			}
+			for(int col=1; col<=2*(userInput-row); col++) {
+				System.out.print(" ");
+			}
+			for(int col=1; col<=row; col++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		for(int row=userInput; row>=1; row--) {
+			for(int col=1; col<=row; col++) {
+				System.out.print("*");
+			}
+			for(int col=1; col<=2*(userInput-row); col++) {
+				System.out.print(" ");
+			}
+			for(int col=1; col<=row; col++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
+
 	private static void diamondStarPattern(int userInput) {
 		for(int row=1; row<=userInput; row++) {
 			for(int col=1; col<=userInput-row; col++) {
