@@ -9,8 +9,17 @@ public class Main {
 	System.out.print("Please enter number: ");
 	int userInput = sc.nextInt();
 	
-	// pattern 22
+	// pattern 25
+	//kPattern(userInput);
 	
+	// pattern 24
+	//rightPascalsTriangle(userInput);
+	
+	// pattern 23
+	//pascalsTriangle(userInput); // unable to do it
+	
+	// pattern 22
+	//hollowHourglassPattern(userInput);
 	
 	// pattern 21
 	//hollowDiamondPyramid(userInput);
@@ -77,6 +86,81 @@ public class Main {
 	
 	}
 	
+	private static void kPattern(int userInput) {
+		for(int row=userInput; row>=1; row--) {
+			for(int col=1; col<=row; col++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		for(int row=2; row<=userInput; row++) {
+			for(int col=1; col<=row; col++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
+
+	private static void rightPascalsTriangle(int userInput) {
+		for(int row=1; row<=userInput; row++) {
+			for(int col=1; col<=row; col++) {
+				System.out.print("* ");
+			}
+			System.out.println();
+		}
+		for(int row=userInput-1; row>=1; row--) {
+			for(int col=1; col<=row; col++) {
+				System.out.print("* ");
+			}
+			System.out.println();
+		}
+	}
+
+	private static void pascalsTriangle(int userInput) {
+		for(int row=1; row<=userInput; row++) {
+			for(int col=1; col<=userInput-row; col++) {
+				System.out.print(" ");
+			}
+			for(int col=1; col<=2*row-1; col++) {
+				if(col==1 || col==2*row-1) {
+					System.out.print(1);	
+				} else {
+					System.out.print(" ");
+				}
+			}
+			System.out.println();
+		}
+	}
+
+	private static void hollowHourglassPattern(int userInput) {
+		for(int row=userInput; row>=1; row--) {
+			for(int col=1; col<=userInput-row; col++) {
+				System.out.print(" ");
+			}
+			for(int col=1; col<=2*row-1; col++) {
+				if(col==1 || col==2*row-1 || (row==userInput && col%2!=0)) {
+					System.out.print("*");	
+				} else {
+					System.out.print(" ");
+				}
+			}
+			System.out.println();
+		}
+		for(int row=2; row<=userInput; row++) {
+			for(int col=1; col<=userInput-row; col++) {
+				System.out.print(" ");
+			}
+			for(int col=1; col<=2*row-1; col++) {
+				if(col==1 || col==2*row-1 || (row==userInput && col%2!=0)) {
+					System.out.print("*");	
+				} else {
+					System.out.print(" ");
+				}
+			}
+			System.out.println();
+		}
+	}
+
 	private static void hollowDiamondPyramid(int userInput) {
 		for(int row=1; row<=userInput; row++) {
 			for(int col=1; col<=userInput-row; col++) {
