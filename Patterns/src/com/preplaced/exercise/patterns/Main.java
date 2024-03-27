@@ -9,8 +9,29 @@ public class Main {
 	System.out.print("Please enter number: ");
 	int userInput = sc.nextInt();
 	
+	// pattern 22
+	
+	
+	// pattern 21
+	//hollowDiamondPyramid(userInput);
+	
+	// pattern 20
+	//reverseHollowTrianglePattern(userInput);
+	
+	// pattern 19
+	//hollowTrianglePattern(userInput);
+	
+	// pattern 18
+	//mirrorImageTriangle(userInput);
+	
+	// pattern 17
+	//reverseNumberTrianglePattern(userInput);
+	
+	// pattern 16
+	//triangleStarPattern(userInput);
+	
 	// pattern 15
-	reverseLeftHalfPyramid(userInput);
+	//reverseLeftHalfPyramid(userInput);
 	
 	// pattern 14
 	//leftHalfPyramidPattern(userInput);
@@ -56,6 +77,112 @@ public class Main {
 	
 	}
 	
+	private static void hollowDiamondPyramid(int userInput) {
+		for(int row=1; row<=userInput; row++) {
+			for(int col=1; col<=userInput-row; col++) {
+				System.out.print(" ");
+			}
+			for(int col=1; col<=2*row-1; col++) {
+				if(col==1 || col==2*row-1) {
+					System.out.print("*");	
+				} else {
+					System.out.print(" ");
+				}
+			}
+			System.out.println();
+		}
+		for(int row=userInput; row>=1; row--) {
+			for(int col=1; col<=userInput-row; col++) {
+				System.out.print(" ");
+			}
+			for(int col=1; col<=2*row-1; col++) {
+				if(col==1 || col==2*row-1) {
+					System.out.print("*");	
+				} else {
+					System.out.print(" ");
+				}
+			}
+			System.out.println();
+		}
+	}
+
+	private static void reverseHollowTrianglePattern(int userInput) {
+		for(int row=userInput; row>=1; row--) {
+			for(int col=1; col<=userInput-row; col++) {
+				System.out.print(" ");
+			}
+			for(int col=1; col<=2*row-1; col++) {
+				if(col==1 || row==userInput || col==2*row-1) {
+					System.out.print("*");
+				} else {
+					System.out.print(" ");
+				}
+			}
+			System.out.println();
+		}
+	}
+
+	private static void hollowTrianglePattern(int userInput) {
+		for(int row=1; row<=userInput; row++) {
+			for(int col=1; col<=userInput-row; col++) {
+				System.out.print(" ");
+			}
+			for(int col=1; col<=(2*row-1); col++) {
+				if(col==1 || row==userInput || col==(2*row-1)) {
+					System.out.print("*");
+				} else {
+					System.out.print(" ");
+				}
+			}
+			System.out.println();
+		}
+	}
+
+	private static void mirrorImageTriangle(int userInput) {
+		for(int row=1; row<=userInput; row++) {
+			for(int col=1; col<row; col++) {
+				System.out.print(" ");
+			}
+			for(int col=row; col<=userInput; col++) {
+				System.out.print(col + " ");
+			}
+			System.out.println();
+		}
+		for(int row=userInput; row>=1; row--) {
+			for(int col=1; col<row; col++) {
+				System.out.print(" ");
+			}
+			for(int col=row; col<=userInput; col++) {
+				System.out.print(col + " ");
+			}
+			System.out.println();
+		}
+	}
+
+	private static void reverseNumberTrianglePattern(int userInput) {
+		for(int row=1; row<=userInput; row++) {
+			for(int col=1; col<row; col++) {
+				System.out.print(" ");
+			}
+			for(int col=row; col<=userInput; col++) {
+				System.out.print(col + " ");
+			}
+			System.out.println();
+		}
+	}
+
+	private static void triangleStarPattern(int userInput) {
+		for(int row=1; row<=userInput; row++) {
+			for(int col=1; col<=userInput-row; col++) {
+				System.out.print(" ");
+			}
+			for(int col=1; col<=row; col++) {
+				System.out.print("*" + " ");
+			}
+			System.out.println();
+		}
+	}
+
 	private static void reverseLeftHalfPyramid(int userInput) {
 		for(int row=userInput; row>=1; row--) {
 			for(int col=1; col<=userInput-row; col++) {
